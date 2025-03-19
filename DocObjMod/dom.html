@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Obj Mod</title>
+</head>
+<body>
+    <button class="btn1">Hello</button>
+    <script>
+        console.log(document.querySelector('button'));
+        console.log(document.querySelector('button').innerHTML);
+        console.log(document.querySelector('body'));
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('.btn1').innerHTML='changed';
+        console.log(document.body.innerHTML);
+    </script>
+</body>
+</html>

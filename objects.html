@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obeejay</title>
+</head>
+<body>
+    <script>
+        const product = {
+            name: "shirt",
+            ['delivery-time']: '2 days',
+            rating: {
+                stars: 4.5,
+                users: 87
+            }
+        };
+        console.log('stars out of 5 : ', product.rating.stars);
+        console.log('time taken for delivery : ', product['delivery-time']);
+    </script>
+</body>
