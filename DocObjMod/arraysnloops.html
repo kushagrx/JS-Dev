@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>To-do list:</p>
+    <input class="input-text" placeholder="Enter text here"> 
+    <button onclick="
+    addTodo()
+    ">Add</button> <br>
+    <button onclick="
+    print()">print the list</button>
+
+    <script>
+        const todolist=[];
+
+        function addTodo(){
+        const inputElement=document.querySelector('.input-text');
+        const text=inputElement.value;
+        console.log(text);
+        todolist.push(text);
+        console.log(todolist);
+
+        function print(){
+        for(let i=0;i<todolist.length;i++){
+            console.log(i);
+        }
+    }
+        };
+    </script>
+
+</body>
+</html>
