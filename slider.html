@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image sliders</title>
+</head>
+<style>
+    .slider-container {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+    .slider{
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .slider img{
+        width: 100%;
+        display: none;
+    }
+    img.displaySlide{
+        display: block;
+    }
+</style>
+<body>
+
+    <div class="slider-container">
+        <div class="slides">
+            <img class="slide" src="/JavaScript/imges/AIR+JORDAN+1+MID.png" alt="Slide 1">
+            <img class="slide" src="/JavaScript/imges/AIR+JORDAN+1+MID 2.png" alt="Slide 2">
+            <img class="slide" src="/JavaScript/imges/AIR+JORDAN+1+MID 3.png" alt="Slide 3">
+        </div>
+        <button class="btn prev" onclick="prevSlide()">←</button>
+        <button class="btn next" onclick="nextSlide()">→</button>
+    </div>
+
+<script>
+    const slides = document.querySelectorAll(".slides img"); //selecting the images in the class of slides
+    let slideIndex = 0;
+    let intervalId=null;
+
+    document.addEventListener("DOMContentLoaded",initializeSlider);
+
+    function initializeSlider(){
+        slides[slideIndex].classList.add("displaySlide");
+        intervalId=setInterval(nextSlide,5000);
+    }
+    function showSlide(){
+        slides.forEach(slide=>{
+            slide.classList.remove("displaySlide");
+        })
+        slides[slideIndex].classList.add("displaySlide");
+    }
+    function prevSlide(){
+
+    }
+    function nextSlide(){
+        slideIndex++;
+        showSlide(slideIndex);
+    }
+
+</script>
+</body>
+</html>
